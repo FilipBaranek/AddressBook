@@ -1,0 +1,62 @@
+﻿<Window x:Class="AddressBook.EditorWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AddressBook.EditorWpfApp"
+        mc:Ignorable="d"
+        Title="Adresár zamestnancov" Height="450" Width="910">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_Súbor">
+                <MenuItem Header="_Nový" Click="NewFile_Click"/>
+                <MenuItem Header="_Otvoriť..." Click="OpenFile_Click"/>
+                <MenuItem Header="_Uložiť ako..." Click="SaveFile_Click"/>
+                <Separator/>
+                <MenuItem Header="_Skončiť" Click="ExitMenuItem_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="_Úpravy">
+                <MenuItem Header="_Pridať..." Click="AddEmployee_Click"/>
+                <MenuItem Header="_Editovať..." Click="EditEmployee_Click"/>
+                <MenuItem Header="_Odstrániť" Click="DeleteEmployee_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="_Pomocník">
+                <MenuItem Header="_O programe..." Click="AboutProgram_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Margin="5" Padding="8, 4" Content="Pridať..." Click="AddEmployee_Click"/>
+            <Button x:Name="editButton"  Margin="5" Padding="8, 4" Content="Editovať..." IsEnabled="False" Click="EditEmployee_Click"/>
+            <Button x:Name="removeButton"  Margin="5" Padding="8, 4" Content="Odstrániť" IsEnabled="False" Click="DeleteEmployee_Click"/>
+            <TextBlock Margin="8" Padding="8, 4" Text="Počet:"/>
+            <TextBlock x:Name="countTextBlock" Margin="8" Padding="8, 4" Text= "0" FontWeight="Bold"/>
+        </StackPanel>
+
+        <Button x:Name="searchButton"  Grid.Row="1" HorizontalAlignment="Right"  Margin="5" Padding="8" Content="Vyhľadávať..." IsEnabled="False" Click="SearchEmployees_Click"/>
+
+        <ListView x:Name="employeeListView" Grid.Row="2"  Margin="5" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Zamestnanec" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Funkcia" DisplayMemberBinding="{Binding Position}" Width="150"/>
+                    <GridViewColumn Header="Telefón" DisplayMemberBinding="{Binding Phone}" Width="120"/>
+                    <GridViewColumn Header="E-mail" DisplayMemberBinding="{Binding Email}" Width="180"/>
+                    <GridViewColumn Header="Miestnosť" DisplayMemberBinding="{Binding Room}" Width="100"/>
+                    <GridViewColumn Header="Pracovisko" DisplayMemberBinding="{Binding Workplace}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
+    </Grid>
+</Window>
