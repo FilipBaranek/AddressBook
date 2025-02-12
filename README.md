@@ -6,6 +6,7 @@ Logika za načítaním, vytváraním a mazaním zamestnancov z JSON súborov pre
 
 ## Konzolová aplikácia
 Pracovanie s uvedenými funkciami z knižnice pomocou CLI prostredia
+
 Príkazy (každý sa začína charaktermi --):
 - input nazovsuboru.pripona
 - name meno (časť alebo celé vyhľadávané meno)
