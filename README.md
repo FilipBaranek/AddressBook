@@ -8,7 +8,7 @@ Logika za načítaním, vytváraním a mazaním zamestnancov z JSON súborov pre
 Pracovanie s uvedenými funkciami z knižnice pomocou CLI prostredia
 
 Príkazy (každý sa začína charaktermi --):
-- input nazovsuboru.pripona
+- input nazovsuboru.json
 - name meno (časť alebo celé vyhľadávané meno)
 - main-workplace "Názov pracoviska" (Celý názov v uvodzovkách s diagritikou)
 - position pracovna pozicia
