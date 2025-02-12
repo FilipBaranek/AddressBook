@@ -2,7 +2,7 @@
 Je WPF aplikácia zameraná na manažovanie zamestnancov, v zmysle ich hľadania, pridávania, mazania z JSON súborov a úpravou (aktualizáciou) ich osobných údajov. Upravené alebo na novo vytvorené súbory je možné uložiť alebo exportovať ako CSV súbory.
 
 ## Knižnica
-Logika za načítaním, vytváraním a mazaním zamestnancov z JSON súborov podľa presného formátu uvedeného nižšie, filtrovanie, upráva údajov, export a ukladanie zamestnancov do súborov
+Logika za načítaním, vytváraním a mazaním zamestnancov z JSON súborov presného formátu uvedeného nižšie, filtrovanie, upráva údajov, export a ukladanie zamestnancov do súborov
 
 ## Konzolová aplikácia
 Pracovanie s uvedenými funkciami z knižnice pomocou CLI prostredia
